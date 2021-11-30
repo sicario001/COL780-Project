@@ -19,7 +19,9 @@ import torch.nn.functional as F
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, Dataset
 
-from model import ReidModel, DummyModel
+from final.ReID_Slice_Cosine import SliceNet as ReidModel
+weights_file = "final/models/final_model_Slice_Cosine_100.pth"
+
 from utils import get_id
 from metrics import rank1, rank5, calc_ap
 
@@ -28,7 +30,7 @@ from metrics import rank1, rank5, calc_ap
 # TODO: update with your model's feature length
 
 batch_size = 1
-H, W, D = 7, 7, 2048 # for dummymodel we have feature volume 7x7x2048
+H, W, D = 1, 1, 128 # for dummymodel we have feature volume 7x7x2048
 
 # ### Load Model
 
@@ -40,21 +42,24 @@ H, W, D = 7, 7, 2048 # for dummymodel we have feature volume 7x7x2048
 #model.eval()
 
 # TODO: Comment out the dummy model
-model = DummyModel(batch_size, H, W, D)
+model = ReidModel(numClasses=62,inference=True)
+model.load_state_dict(torch.load(weights_file,map_location=torch.device('cpu')), strict=False)
+model.eval()
+
 
 # ### Data Loader for query and gallery
 
 # TODO: For demo, we have resized to 224x224 during data augmentation
 # You are free to use augmentations of your own choice
 transform_query_list = [
-        transforms.Resize((224,224), interpolation=3),
+        transforms.Resize((128, 48), interpolation=3),
         transforms.ToTensor(),
-        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        transforms.Normalize([0.4726, 0.4468, 0.4811], [0.2765, 0.2747, 0.2764])
     ]
 transform_gallery_list = [
-        transforms.Resize(size=(224,224), interpolation=3), #Image.BICUBIC
+        transforms.Resize(size=(128, 48), interpolation=3), #Image.BICUBIC
         transforms.ToTensor(),
-        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        transforms.Normalize([0.4726, 0.4468, 0.4811], [0.2765, 0.2747, 0.2764])
     ]
 
 data_transforms = {
@@ -89,6 +94,8 @@ def extract_feature(dataloaders):
         #img, label = img.cuda(), label.cuda()
 
         output = model(img) # (B, D, H, W) --> B: batch size, HxWxD: feature volume size
+        # change to 1,1,128
+        output = output[None, None, :]
 
         n, c, h, w = img.size()
         
@@ -118,13 +125,13 @@ query_cam,query_label = get_id(query_path)
 
 concatenated_query_vectors = []
 for query in tqdm(query_feature):
-    fnorm = torch.norm(query, p=2, dim=1, keepdim=True)#*np.sqrt(H*W)
+    fnorm = torch.norm(query, p=2, dim=0, keepdim=True)#*np.sqrt(H*W)
     query_norm = query.div(fnorm.expand_as(query))
     concatenated_query_vectors.append(query_norm.view((-1)))
 
 concatenated_gallery_vectors = []
 for gallery in tqdm(gallery_feature):
-    fnorm = torch.norm(gallery, p=2, dim=1, keepdim=True)#*np.sqrt(H*W)
+    fnorm = torch.norm(gallery, p=2, dim=0, keepdim=True)#*np.sqrt(H*W)
     gallery_norm = gallery.div(fnorm.expand_as(gallery))
     concatenated_gallery_vectors.append(gallery_norm.view((-1)))
   
