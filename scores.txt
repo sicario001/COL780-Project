@@ -44,3 +44,14 @@ Slice (old) augmented (run1)
 175	:	Rank1: 0.964, Rank5: 1.000, mAP: 0.902
 200	:	Rank1: 0.929, Rank5: 1.000, mAP: 0.904
 
+Slice Alt augmeted (run1):
+20	:	Rank1: 0.857, Rank5: 0.929, mAP: 0.829
+40	:	Rank1: 1.000, Rank5: 1.000, mAP: 0.933
+60	:	Rank1: 0.929, Rank5: 0.964, mAP: 0.895
+80	:	Rank1: 0.929, Rank5: 0.964, mAP: 0.885
+100	:	Rank1: 0.929, Rank5: 0.964, mAP: 0.854
+120	:	Rank1: 0.929, Rank5: 1.000, mAP: 0.876
+140	:	Rank1: 0.964, Rank5: 1.000, mAP: 0.911
+160	:	Rank1: 0.893, Rank5: 1.000, mAP: 0.856
+180	:	Rank1: 0.857, Rank5: 0.964, mAP: 0.865
+200	:	Rank1: 0.893, Rank5: 0.929, mAP: 0.869
