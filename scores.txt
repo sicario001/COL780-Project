@@ -55,3 +55,13 @@ Slice Alt augmeted (run1):
 160	:	Rank1: 0.893, Rank5: 1.000, mAP: 0.856
 180	:	Rank1: 0.857, Rank5: 0.964, mAP: 0.865
 200	:	Rank1: 0.893, Rank5: 0.929, mAP: 0.869
+
+Slice Alt Cosine augmented (run1):
+20	:	Rank1: 0.929, Rank5: 0.964, mAP: 0.894
+40	:	Rank1: 0.964, Rank5: 0.964, mAP: 0.886
+75	:	Rank1: 0.929, Rank5: 1.000, mAP: 0.928
+100	:	Rank1: 0.929, Rank5: 0.964, mAP: 0.906
+125	:	Rank1: 0.964, Rank5: 1.000, mAP: 0.934
+150	:	Rank1: 0.964, Rank5: 1.000, mAP: 0.926
+175	:	Rank1: 0.964, Rank5: 1.000, mAP: 0.925
+200	:	Rank1: 0.929, Rank5: 1.000, mAP: 0.882
