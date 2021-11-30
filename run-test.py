@@ -94,8 +94,6 @@ def extract_feature(dataloaders):
         #img, label = img.cuda(), label.cuda()
 
         output = model(img) # (B, D, H, W) --> B: batch size, HxWxD: feature volume size
-        # change to 1,1,128
-        output = output[None, None, :]
 
         n, c, h, w = img.size()
         
