@@ -9,18 +9,19 @@ Baseline cosine augmented (run1)
 200	:	Rank1: 0.857, Rank5: 0.964, mAP: 0.828
 225	:	Rank1: 0.857, Rank5: 0.964, mAP: 0.828
 250	:	Rank1: 0.893, Rank5: 1.000, mAP: 0.857
+300	:	Rank1: 0.857, Rank5: 0.964, mAP: 0.742
 
 Baseline cosine no augmentation (run1)
-25 	:	Rank1: 0.857, Rank5: 1.000, mAP: 0.743
-50	:	Rank1: 0.857, Rank5: 0.929, mAP: 0.731
-75 	:	Rank1: 0.893, Rank5: 0.964, mAP: 0.822
-100 	: 	Rank1: 0.929, Rank5: 0.964, mAP: 0.857
-125	:	Rank1: 0.893, Rank5: 0.964, mAP: 0.816
+25 	:	Rank1: 0.821, Rank5: 1.000, mAP: 0.734
+50	:	Rank1: 0.821, Rank5: 0.929, mAP: 0.714
+75 	:	Rank1: 0.821, Rank5: 1.000, mAP: 0.795
+100 	: 	Rank1: 0.857, Rank5: 0.929, mAP: 0.792
+125	:	Rank1: 0.857, Rank5: 0.964, mAP: 0.804
 150	:	Rank1: 0.929, Rank5: 0.964, mAP: 0.835
-175	:	Rank1: 0.821, Rank5: 0.964, mAP: 0.765
-200	:	Rank1: 0.857, Rank5: 1.000, mAP: 0.790
-225	:	Rank1: 0.857, Rank5: 0.964, mAP: 0.796
-250	:	Rank1: 0.893, Rank5: 0.929, mAP: 0.777
+175	:	Rank1: 0.857, Rank5: 1.000, mAP: 0.780
+200	:	Rank1: 0.857, Rank5: 0.964, mAP: 0.814
+225	:	Rank1: 0.857, Rank5: 0.964, mAP: 0.806
+250	:	Rank1: 0.750, Rank5: 0.929, mAP: 0.729
 
 
 Slice cosine augmented (run1)
