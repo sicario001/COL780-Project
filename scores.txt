@@ -1,0 +1,45 @@
+Baseline cosine augmented (run1)
+25 	:	Rank1: 0.929, Rank5: 1.000, mAP: 0.870
+50 	:	Rank1: 0.929, Rank5: 1.000, mAP: 0.855
+75 	:	Rank1: 0.821, Rank5: 0.929, mAP: 0.837
+100 	: 	Rank1: 0.857, Rank5: 1.000, mAP: 0.837
+125	:	Rank1: 0.857, Rank5: 1.000, mAP: 0.827
+150	:	Rank1: 0.821, Rank5: 0.964, mAP: 0.799
+175	:	Rank1: 0.857, Rank5: 0.929, mAP: 0.833
+200	:	Rank1: 0.857, Rank5: 0.964, mAP: 0.828
+225	:	Rank1: 0.857, Rank5: 0.964, mAP: 0.828
+250	:	Rank1: 0.893, Rank5: 1.000, mAP: 0.857
+
+Baseline cosine no augmentation (run1)
+25 	:	Rank1: 0.857, Rank5: 1.000, mAP: 0.743
+50	:	Rank1: 0.857, Rank5: 0.929, mAP: 0.731
+75 	:	Rank1: 0.893, Rank5: 0.964, mAP: 0.822
+100 	: 	Rank1: 0.929, Rank5: 0.964, mAP: 0.857
+125	:	Rank1: 0.893, Rank5: 0.964, mAP: 0.816
+150	:	Rank1: 0.929, Rank5: 0.964, mAP: 0.835
+175	:	Rank1: 0.821, Rank5: 0.964, mAP: 0.765
+200	:	Rank1: 0.857, Rank5: 1.000, mAP: 0.790
+225	:	Rank1: 0.857, Rank5: 0.964, mAP: 0.796
+250	:	Rank1: 0.893, Rank5: 0.929, mAP: 0.777
+
+
+Slice cosine augmented (run1)
+25	:	Rank1: 0.893, Rank5: 1.000, mAP: 0.862
+50	:	Rank1: 0.964, Rank5: 1.000, mAP: 0.900
+75	:	Rank1: 0.857, Rank5: 0.929, mAP: 0.836
+100	:	Rank1: 1.000, Rank5: 1.000, mAP: 0.940
+125	:	Rank1: 0.893, Rank5: 1.000, mAP: 0.888
+150	:	Rank1: 0.821, Rank5: 0.964, mAP: 0.825
+175	:	Rank1: 1.000, Rank5: 1.000, mAP: 0.904
+200	:	Rank1: 0.857, Rank5: 0.964, mAP: 0.852
+
+Slice (old) augmented (run1)
+25	:	Rank1: 0.964, Rank5: 0.964, mAP: 0.864
+50	:	Rank1: 0.929, Rank5: 0.964, mAP: 0.870
+75	:	Rank1: 0.964, Rank5: 0.964, mAP: 0.884
+100	:	Rank1: 0.893, Rank5: 1.000, mAP: 0.859
+125	:	Rank1: 0.929, Rank5: 1.000, mAP: 0.892
+150	:	Rank1: 0.929, Rank5: 0.964, mAP: 0.887
+175	:	Rank1: 0.964, Rank5: 1.000, mAP: 0.902
+200	:	Rank1: 0.929, Rank5: 1.000, mAP: 0.904
+
